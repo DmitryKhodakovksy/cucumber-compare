@@ -55,7 +55,7 @@ public class HomePageObject extends AbstractPageObject {
     }
 
     public List<String> getColumnValues(String columnName) {
-        return driver.findElements(By.xpath("//table[@id=\"customers\"]/tr/td[" + Table.fromName(columnName).getIndex() + "]"))
+        return driver.findElements(By.xpath("//table[@id=\"customers\"]/tbody/tr/td[" + Table.fromName(columnName).getIndex() + "]"))
                 .stream()
                 .map(WebElement::getText)
                 .collect(Collectors.toList());

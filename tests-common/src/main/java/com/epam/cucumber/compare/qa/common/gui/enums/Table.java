@@ -2,9 +2,9 @@ package com.epam.cucumber.compare.qa.common.gui.enums;
 
 public enum Table {
 
-    COMPANY(0, "Company"),
-    CONTACT(1, "Contact"),
-    COUNTRY(2, "Country");
+    COMPANY(1, "Company"),
+    CONTACT(2, "Contact"),
+    COUNTRY(3, "Country");
 
     private int index;
     private String name;
