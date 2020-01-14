@@ -15,14 +15,16 @@ package com.epam.cucumber.compare.qa.common.gui.services.pages;
 * limitations under the License.
 */
 import com.epam.cucumber.compare.qa.common.gui.annotations.PageObject;
+import com.epam.cucumber.compare.qa.common.gui.enums.Table;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 
-/**
- * Created by Anton_Shapin on 5/23/17.
- */
+import java.util.List;
+import java.util.stream.Collectors;
+
 @PageObject
 public class HomePageObject extends AbstractPageObject {
     private final Logger LOG = LoggerFactory.getLogger(this.getClass());
@@ -31,7 +33,7 @@ public class HomePageObject extends AbstractPageObject {
     protected String siteUrl;
 
     public void open(){
-        LOG.info("Open main page");
+        LOG.info("Open HTML HOME page");
         driver.get(siteUrl);
 
     }
@@ -39,5 +41,24 @@ public class HomePageObject extends AbstractPageObject {
         driver.manage().window().maximize();
         driver.findElement(By.xpath("//*[@id=\"gh-eb-Geo\"]")).click();
         driver.findElement(By.xpath("//*[@id=\"gh-eb-Geo-a-en\"]")).click();
+    }
+
+    public void clickLink(String linkName) {
+        driver.findElement(By.linkText(linkName)).click();
+    }
+
+    public List<String> getColumnNames() {
+       return driver.findElements(By.xpath("//table[@id=\"customers\"]//th"))
+               .stream()
+               .map(WebElement::getText)
+               .collect(Collectors.toList());
+    }
+
+    public List<String> getColumnValues(String columnName) {
+        return driver.findElements(By.xpath("//table[@id=\"customers\"]/tr/td[" + Table.fromName(columnName).getIndex() + "]"))
+                .stream()
+                .map(WebElement::getText)
+                .collect(Collectors.toList());
+
     }
 }
