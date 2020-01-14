@@ -1,6 +1,6 @@
 package com.epam.cucumber.compare.qa.common.gui.enums;
 
-public enum Table {
+public enum CustomersTable {
 
     COMPANY(1, "Company"),
     CONTACT(2, "Contact"),
@@ -9,7 +9,7 @@ public enum Table {
     private int index;
     private String name;
 
-    Table(int index, String name) {
+    CustomersTable(int index, String name) {
         this.index = index;
         this.name = name;
     }
@@ -22,9 +22,9 @@ public enum Table {
         return name;
     }
 
-    public static Table fromName(String name) {
+    public static CustomersTable fromName(String name) {
 
-        for (Table column : values()) {
+        for (CustomersTable column : values()) {
             if (name.equals(column.getName())) {
                 return column;
             }

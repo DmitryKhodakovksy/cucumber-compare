@@ -15,7 +15,7 @@ package com.epam.cucumber.compare.qa.common.gui.services.pages;
 * limitations under the License.
 */
 import com.epam.cucumber.compare.qa.common.gui.annotations.PageObject;
-import com.epam.cucumber.compare.qa.common.gui.enums.Table;
+import com.epam.cucumber.compare.qa.common.gui.enums.CustomersTable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
@@ -55,7 +55,7 @@ public class HomePageObject extends AbstractPageObject {
     }
 
     public List<String> getColumnValues(String columnName) {
-        return driver.findElements(By.xpath("//table[@id=\"customers\"]/tbody/tr/td[" + Table.fromName(columnName).getIndex() + "]"))
+        return driver.findElements(By.xpath("//table[@id=\"customers\"]/tbody/tr/td[" + CustomersTable.fromName(columnName).getIndex() + "]"))
                 .stream()
                 .map(WebElement::getText)
                 .collect(Collectors.toList());
