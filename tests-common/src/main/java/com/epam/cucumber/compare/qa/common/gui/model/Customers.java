@@ -1,12 +1,10 @@
 package com.epam.cucumber.compare.qa.common.gui.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Builder;
+import lombok.Data;
 
-@Getter
-@Setter
-@NoArgsConstructor
+@Builder
+@Data
 public class Customers {
     private String company;
     private String contact;
