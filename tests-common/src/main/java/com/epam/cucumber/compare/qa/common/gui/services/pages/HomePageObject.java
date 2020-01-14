@@ -61,4 +61,8 @@ public class HomePageObject extends AbstractPageObject {
                 .collect(Collectors.toList());
 
     }
+
+    public int getRowCount() {
+        return driver.findElements(By.xpath("//table[@id=\"customers\"]//tr")).size() - 1;
+    }
 }
