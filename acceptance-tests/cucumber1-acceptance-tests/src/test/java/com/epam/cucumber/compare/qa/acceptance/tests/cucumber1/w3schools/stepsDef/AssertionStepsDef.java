@@ -22,7 +22,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import org.hamcrest.CoreMatchers;
 import org.openqa.selenium.By;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -75,6 +74,6 @@ public class AssertionStepsDef extends AbstractStepsDef {
     public void iShouldSeeHeader(String expectedHeader) {
         assertThat("Header is not as expected",
                 driver.findElement(By.xpath("//*[@id=\"main\"]/h1")).getText(),
-                CoreMatchers.equalTo(expectedHeader));
+                equalTo(expectedHeader));
     }
 }

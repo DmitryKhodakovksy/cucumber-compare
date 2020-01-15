@@ -25,18 +25,18 @@ public class StepLoggerAspect {
     public void cucumberStepOperation() {
     }
 
-    private void proceed(ProceedingJoinPoint proceedingJoinPoint) {
+    @Around("cucumberStepOperation()")
+    public void logCucumberStep(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+        proceed(proceedingJoinPoint);
+    }
+
+    private void proceed(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
         try {
             proceedingJoinPoint.proceed();
         } catch (Throwable throwable) {
             attachScreenshot();
-            throwable.printStackTrace();
+            throw throwable;
         }
-    }
-
-    @Around("cucumberStepOperation()")
-    public void logCucumberStep(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-        proceed(proceedingJoinPoint);
     }
 
     private void attachScreenshot() {
