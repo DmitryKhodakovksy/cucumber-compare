@@ -13,7 +13,7 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-package ebay;
+package w3schools;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -23,9 +23,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         strict = true,
         plugin = {
-                "com.github.kirlionik.cucumberallure.AllureReporter",
+                "io.qameta.allure.cucumberjvm.AllureCucumberJvm",
                 "html:target/cucumber-html-report"
-        },tags = {"~@Ignore", "~@InDev"}
+        },tags = {"@debug"}
 )
 public class RunAcceptanceTests {
 }

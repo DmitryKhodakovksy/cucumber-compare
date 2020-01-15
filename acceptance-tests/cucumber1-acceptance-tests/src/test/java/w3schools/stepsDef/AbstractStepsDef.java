@@ -13,24 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ebay.stepsDef;
+package w3schools.stepsDef;
 
 import com.epam.cucumber.compare.qa.common.gui.services.pages.HomePageObject;
 import com.epam.cucumber.compare.qa.common.gui.services.webdriver.WrappedWebdriver;
-import ebay.configuration.AppConfig;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ContextConfiguration;
-
-import static org.springframework.test.annotation.DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD;
+import w3schools.configuration.AppConfig;
 
 @ContextConfiguration(classes = {AppConfig.class})
-@DirtiesContext(classMode = AFTER_EACH_TEST_METHOD)
+@DirtiesContext
 public class AbstractStepsDef {
-    @Value("${site.url:localhost}")
-    protected String siteUrl;
 
     @Autowired
     @Lazy

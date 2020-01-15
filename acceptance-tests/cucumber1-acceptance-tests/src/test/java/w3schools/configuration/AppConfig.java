@@ -13,13 +13,18 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-package ebay.configuration;
+package w3schools.configuration;
 
 import com.epam.cucumber.compare.qa.common.gui.configuration.WebdriverConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.*;
-import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 import org.springframework.core.env.Environment;
 
 @Configuration
@@ -42,8 +47,4 @@ public class AppConfig {
         return Boolean.valueOf(reportPortalProviderEnabled);
     }
 
-    @Bean
-    public static PropertySourcesPlaceholderConfigurer PropertySourcesPlaceholderConfigurer() {
-        return new PropertySourcesPlaceholderConfigurer();
-    }
 }

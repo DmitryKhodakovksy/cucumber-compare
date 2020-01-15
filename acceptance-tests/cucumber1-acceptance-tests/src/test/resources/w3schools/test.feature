@@ -4,7 +4,7 @@ Feature: Cucumber compare feature
 #    enum?
     Given I open HTML home page
 #    regular
-    When I click 'HTML Table' link
+    When I click 'HTML Tables' link
 
   @TestCaseId("example-1")
   Scenario: Example-1
@@ -38,7 +38,7 @@ Feature: Cucumber compare feature
       | Laughing Bacchus Winecellars | Yoshi Tannamuri  | Canada  |
       | Magazzini Alimentari Riuniti | Giovanni Rovelli | Italy   |
 
-  @TestCaseId("example-4")
+  @TestCaseId("example-4") @debug
   Scenario: Example-4
 #    convert to List<Map<String, String>>
     Then table should contain records with values

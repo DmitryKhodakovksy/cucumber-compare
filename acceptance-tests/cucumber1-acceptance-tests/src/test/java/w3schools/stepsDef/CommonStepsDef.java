@@ -13,17 +13,23 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-package ebay.stepsDef;
+package w3schools.stepsDef;
 
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
 
 public class CommonStepsDef extends AbstractStepsDef{
     /**
      * Open home page by direct url
      * @throws Throwable
      */
-    @Given("^I open home page$")
+    @Given("^I open HTML home page$")
     public void iOpenHomePage() throws Throwable {
         homePage.open();
+    }
+
+    @When("^I click '([^\"]+)' link$")
+    public void iClickLink(String linkName) {
+        homePage.clickLink(linkName);
     }
 }
