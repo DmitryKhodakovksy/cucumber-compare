@@ -6,3 +6,4 @@
 **/target
 **/allure-results
 **/.DS_Store
+**/.allure
