@@ -24,7 +24,7 @@
         <webdrivermanager.version>3.8.0</webdrivermanager.version>
         <assertj.version>3.6.2</assertj.version>
         <spring.version>5.2.2.RELEASE</spring.version>
-        <javaslang.version>2.0.6</javaslang.version>
+        <janino.version>2.5.10</janino.version>
         <vavr.version>0.10.2</vavr.version>
         <lombok.version>1.18.10</lombok.version>
         <logback.version>1.2.3</logback.version>
@@ -39,6 +39,22 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>janino</groupId>
+                <artifactId>janino</artifactId>
+                <version>${janino.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
             <!--Aspectj-->
             <dependency>
                 <groupId>org.aspectj</groupId>
