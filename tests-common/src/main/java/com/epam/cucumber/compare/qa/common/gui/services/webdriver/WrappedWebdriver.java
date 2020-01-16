@@ -24,10 +24,6 @@ import java.util.Set;
 
 import static java.lang.String.valueOf;
 
-/**
- * Created by Anton_Shapin
- */
-
 public class WrappedWebdriver implements WebDriver {
     private static final String LOG_EXECUTION_TIME = "{} Execution_Time(ms):; {}; Page_URL:; {};";
 

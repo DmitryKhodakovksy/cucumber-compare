@@ -19,9 +19,6 @@ import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 
-/**
- * Created by Anton_Shapin on 5/23/17.
- */
 public class AbstractPageObject {
     @Autowired
     @Lazy

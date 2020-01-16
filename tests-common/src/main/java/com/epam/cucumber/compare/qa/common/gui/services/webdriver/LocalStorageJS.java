@@ -21,9 +21,6 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
-/**
- * Created by Anton_Shapin on 5/23/17.
- */
 @Component
 @Lazy
 public class LocalStorageJS {

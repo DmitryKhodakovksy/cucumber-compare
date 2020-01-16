@@ -24,9 +24,6 @@ import java.lang.annotation.Target;
 import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
-/**
- * Created by Anton_Shapin on 5/23/17.
- */
 @Target(TYPE)
 @Retention(RUNTIME)
 @Component

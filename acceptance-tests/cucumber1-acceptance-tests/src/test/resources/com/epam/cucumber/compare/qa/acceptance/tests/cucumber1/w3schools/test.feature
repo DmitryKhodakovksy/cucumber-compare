@@ -38,7 +38,7 @@ Feature: Cucumber compare feature
       | Laughing Bacchus Winecellars | Yoshi Tannamuri  | Canada  |
       | Magazzini Alimentari Riuniti | Giovanni Rovelli | Italy   |
 
-  @TestCaseId("example-4") @debug
+  @TestCaseId("example-4")
   Scenario: Example-4
 #    convert to List<Map<String, String>>
     Then table should contain records with values

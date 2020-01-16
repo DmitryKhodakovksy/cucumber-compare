@@ -31,9 +31,6 @@ import static io.vavr.API.Match;
 import static org.openqa.selenium.remote.BrowserType.CHROME;
 import static org.openqa.selenium.remote.BrowserType.FIREFOX;
 
-/**
- * Created by Anton_Shapin on 5/23/17.
- */
 @Configuration
 public class WebdriverConfig {
 

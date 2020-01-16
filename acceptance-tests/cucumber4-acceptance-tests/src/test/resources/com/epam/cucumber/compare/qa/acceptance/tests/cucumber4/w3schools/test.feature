@@ -1,3 +1,4 @@
+@debug
 Feature: Cucumber compare feature
 
   Background: Background

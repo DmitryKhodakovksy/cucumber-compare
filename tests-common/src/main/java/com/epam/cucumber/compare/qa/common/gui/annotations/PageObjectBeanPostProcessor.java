@@ -23,7 +23,6 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by Anton_Shapin on 5/23/17.
  * Initialization of page object.
  * Classes marked annotation {@link PageObject}
  * will be initialized with WebDriver as page objects
